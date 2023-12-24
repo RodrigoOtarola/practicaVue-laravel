@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name',150);
             $table->string('email',80);
             $table->string('phone',15);
-            $table->foreignId('deparment_id')->constrained('departaments')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('department_id')->constrained('departaments')->onUpdate('cascade')->onDelete('restrict');
             $table->timestamps();
         });
     }
