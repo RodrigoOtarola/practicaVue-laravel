@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('departments',EmployeeController::class);
 
     /** Ruta de grafica */
-    Route::get('graphic',[EmployeeController::class,'EmployeeByDepartment'])->name('graphic');
+    Route::get('graphic',[EmployeeController::class,'EmployyeByDepartment'])->name('graphic');
     Route::get('reports',[EmployeeController::class,'reports'])->name('graphic');
 });
 
