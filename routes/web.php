@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    /** ruta de controladores  */
+    Route::resource('departments',DepartmentController::class);
+    Route::resource('departments',EmployeeController::class);
+
+    /** Ruta de grafica */
+    Route::get('graphic',[EmployeeController::class,'EmployeeByDepartment'])->name('graphic');
+    Route::get('reports',[EmployeeController::class,'reports'])->name('graphic');
 });
 
 require __DIR__.'/auth.php';
