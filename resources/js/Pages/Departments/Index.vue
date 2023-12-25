@@ -12,7 +12,8 @@ const form = useForm({
     id: ''
 });
 
-const deleteDepartment = () => {
+//Recibimos el parametro id y name
+const deleteDepartment = (id,name) => {
     //Funcion de alerta con SweetAlert
     const alerta = Swal.mixin({
         buttonsStyling: true
