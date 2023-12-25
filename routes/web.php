@@ -38,11 +38,11 @@ Route::middleware('auth')->group(function () {
 
     /** ruta de controladores  */
     Route::resource('departments',DepartmentController::class);
-    Route::resource('departments',EmployeeController::class);
+    Route::resource('employees',EmployeeController::class);
 
     /** Ruta de grafica */
     Route::get('graphic',[EmployeeController::class,'EmployyeByDepartment'])->name('graphic');
-    Route::get('reports',[EmployeeController::class,'reports'])->name('graphic');
+    Route::get('reports',[EmployeeController::class,'reports'])->name('reports');
 });
 
 require __DIR__.'/auth.php';
