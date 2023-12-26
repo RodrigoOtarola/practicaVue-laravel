@@ -6,7 +6,7 @@ defineProps({
         type: String,
         required: true,
     },
-    options
+    options:{}
 });
 
 defineEmits(['update:modelValue']);
